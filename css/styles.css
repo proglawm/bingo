@@ -1,0 +1,105 @@
+body {
+  font-family: 'Courier New', monospace;
+}
+
+header h1{
+  font-size: 60px;
+  display: block;
+  width: 260px;
+  margin: 20px auto;
+  letter-spacing: 0.2em;
+  background: orange;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  line-height: 90%;
+}
+
+th, td {
+  background: pink;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 35%;
+  color: rgb(60, 60, 60);
+  font-weight: bold;
+}
+
+th {
+  background-color: rgb(233, 96, 137);
+  border-radius: 13px;
+  color: white;
+}
+
+.called {
+  background: gray;
+  opacity: 0.5;
+}
+
+div {
+  width: 300px;
+  margin: 0 auto;
+
+}
+
+h2 {
+  margin-bottom: 5px;
+  text-align: center;
+  border: solid 2px yellowgreen;
+  border-radius: 10px;
+  background: yellowgreen;
+  color: white;
+}
+
+table {
+  margin: 0 auto;
+}
+
+#nextContainer {
+  height: 80px;
+}
+
+button {
+  width: auto;
+  margin: 5px auto;
+  background-color: orangered;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 5px;
+  font-size: 15px;
+  font-family: 'Courier New', monospace;
+  display: block;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: 0px 3px 3px orange, 1px 2px 2px white inset;
+  outline: none;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+#nextNum {
+  display: block;
+  margin: auto;
+  width: 80px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 50px;
+  background-color: pink;
+  border-radius: 35%;
+  color: rgb(60, 60, 60);
+}
+
+#calledContainer {
+  width: 200px;
+}
+
+#calledNum {
+  font-size: 20px;
+  line-height: 30px;
+  width: 200px;
+  word-wrap: break-word;
+}
