@@ -48,6 +48,9 @@
   const button = document.querySelector('button');
   const calledNum = document.getElementById('calledNum');
   const calledNumbers = [];
+  const tbody = document.querySelector('tbody');
+  const bingoCall = document.getElementById('bingoCall');
+  let counts = 0;
   button.addEventListener('click', () => {
     let free = document.querySelector('tbody').rows[2].cells[2];
     if (free.textContent === 'FREE') {
@@ -56,17 +59,70 @@
 
     let next = numbers.splice(Math.floor(Math.random() * numbers.length), 1)[0]
     nextNum.textContent = next;
-    console.log(nextNum.textContent);
     calledNumbers.push(next);
-    calledNum.textContent = calledNumbers;
+    calledNum.textContent = calledNumbers;    
     for (let i = 0; i < 5; i++) {
       for (let n = 0; n < 5; n++) {
         let cell = document.querySelector('tbody').rows[i].cells[n];
-        console.log(cell.textContent);
         if (cell.textContent === nextNum.textContent) {
           cell.classList.add('called');
         }
       }
     }
+
+    for (let r = 0; r < 5; r++) {
+      for (let c = 0; c < 5; c++) {
+        if (tbody.rows[r].cells[c].classList.contains('called')) {
+          counts++;
+        }
+        if (c === 4) {
+          if (counts === 5) {
+            bingoCall.classList.remove('hidden');
+          } else {
+            counts = 0;
+          }
+        }
+      }
+    }
+    for (let c = 0; c < 5; c++) {
+      for (let r = 0; r < 5; r++) {
+        if (tbody.rows[r].cells[c].classList.contains('called')) {
+          counts++;
+        }
+        if (r === 4) {
+          if (counts === 5) {
+            bingoCall.classList.remove('hidden');
+          } else {
+            counts = 0;
+          }
+        }
+      }
+    }
+    for (let i = 0; i < 5; i++) {
+      if (tbody.rows[i].cells[i].classList.contains('called')) {
+        counts++;
+      }
+      if (i === 4) {
+        if (counts === 5) {
+          bingoCall.classList.remove('hidden');
+        } else {
+          counts = 0;
+        }
+      }
+    }
+    for (let i = 0; i < 5; i++) {
+      if (tbody.rows[i].cells[4 - i].classList.contains('called')) {
+        counts++;
+      }
+      if (i === 4) {
+        if (counts === 5) {
+          bingoCall.classList.remove('hidden');
+        } else {
+          counts = 0;
+        }
+      }
+    }
+    
+    console.log(counts);
   });
 }
