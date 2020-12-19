@@ -145,7 +145,7 @@ button:hover {
   left: 0;
   right: 0;
   margin: 0 auto;
-  transition: 0.4s;
+  transition: 0.5s;
   z-index: 1;
 }
 
@@ -186,7 +186,8 @@ button:hover {
 
 #reach {
   position:absolute;
-  top: -10px;
+  margin: 0;
+  top: 4px;
   left: 240px;
   background: red;
   color: white;
