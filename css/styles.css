@@ -97,7 +97,6 @@ button:hover {
   display: block;
   margin: auto;
   width: 80px;
-  /* height: 80px; */
   text-align: center;
   line-height: 80px;
   font-size: 50px;
@@ -114,7 +113,6 @@ button:hover {
   font-size: 20px;
   line-height: 30px;
   width: 200px;
-  /* word-wrap: break-word; */
   overflow-wrap: break-word;
 }
 
@@ -163,3 +161,24 @@ button:hover {
 .hidden {
   transform: translateY(-800px);
 }
+
+#sheets {
+  position: relative;
+}
+
+#reach {
+  position:absolute;
+  top: -10px;
+  left: 240px;
+  background: red;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 3px;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.hiddenR {
+  transform: translateX(-800px);
+}
+

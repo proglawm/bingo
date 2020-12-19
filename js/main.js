@@ -50,6 +50,7 @@
   const calledNumbers = [];
   const tbody = document.querySelector('tbody');
   const bingoCall = document.getElementById('bingoCall');
+  const reach = document.getElementById('reach');
   let counts = 0;
   button.addEventListener('click', () => {
     let free = document.querySelector('tbody').rows[2].cells[2];
@@ -76,6 +77,9 @@
           counts++;
         }
         if (c === 4) {
+          if (counts === 4) {
+            reach.classList.remove('hiddenR');
+          }
           if (counts === 5) {
             bingoCall.classList.remove('hidden');
           } else {
@@ -90,6 +94,9 @@
           counts++;
         }
         if (r === 4) {
+          if (counts === 4) {
+            reach.classList.remove('hiddenR');
+          }
           if (counts === 5) {
             bingoCall.classList.remove('hidden');
           } else {
@@ -103,6 +110,9 @@
         counts++;
       }
       if (i === 4) {
+        if (counts === 4) {
+          reach.classList.remove('hiddenR');
+        }
         if (counts === 5) {
           bingoCall.classList.remove('hidden');
         } else {
@@ -115,6 +125,9 @@
         counts++;
       }
       if (i === 4) {
+        if (counts === 4) {
+          reach.classList.remove('hiddenR');
+        }
         if (counts === 5) {
           bingoCall.classList.remove('hidden');
         } else {
