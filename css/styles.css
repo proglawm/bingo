@@ -93,6 +93,10 @@ button:hover {
   height: 165px;
 }
 
+#nextContainer {
+  position: relative;
+}
+
 #nextNum {
   display: block;
   margin: auto;
@@ -105,14 +109,28 @@ button:hover {
   color: rgb(60, 60, 60);
 }
 
+#callCount {
+  margin: 0;
+  position: absolute;
+  top: 5px;
+  left: 200px;
+  text-align: center;
+  display: inline-block;
+  background: skyblue;
+  border-radius: 3px;
+  color: white;
+  width: 90px;
+  padding: 2px 4px;
+}
+
 #calledContainer {
-  width: 200px;
+  width: 260px;
 }
 
 #calledNum {
   font-size: 20px;
   line-height: 30px;
-  width: 200px;
+  width: 260px;
   overflow-wrap: break-word;
 }
 

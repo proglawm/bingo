@@ -52,7 +52,9 @@
   const bingoCall = document.getElementById('bingoCall');
   const reach = document.getElementById('reach');
   let counts = 0;
+  let clicks = 0;
   button.addEventListener('click', () => {
+    clicks++;
     let free = document.querySelector('tbody').rows[2].cells[2];
     if (free.textContent === 'FREE') {
       free.classList.add('called');
@@ -135,7 +137,8 @@
         }
       }
     }
-    
+    const callCount = document.getElementById('callCount');
+    callCount.textContent = `${clicks}th call`;
     console.log(counts);
   });
 }
