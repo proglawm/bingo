@@ -201,3 +201,7 @@ button:hover {
   transform: translateX(-800px);
 }
 
+td.reachTarget {
+  border: solid 3px red;
+
+}

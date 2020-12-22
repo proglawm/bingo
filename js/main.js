@@ -81,12 +81,16 @@
         if (c === 4) {
           if (counts === 4) {
             reach.classList.remove('hiddenR');
+            for (let c2 = 0; c2 < 5; c2++) {
+              if (tbody.rows[r].cells[c2].classList.contains('called') !== true) {
+                tbody.rows[r].cells[c2].classList.add('reachTarget');
+              }
+            }
           }
           if (counts === 5) {
             bingoCall.classList.remove('hidden');
-          } else {
-            counts = 0;
           }
+          counts = 0;
         }
       }
     }
@@ -98,12 +102,16 @@
         if (r === 4) {
           if (counts === 4) {
             reach.classList.remove('hiddenR');
+            for (let r2 = 0; r2 < 5; r2++) {
+              if (tbody.rows[r2].cells[c].classList.contains('called') !== true) {
+                tbody.rows[r2].cells[c].classList.add('reachTarget');
+              }
+            }
           }
           if (counts === 5) {
             bingoCall.classList.remove('hidden');
-          } else {
-            counts = 0;
           }
+          counts = 0;
         }
       }
     }
@@ -114,12 +122,16 @@
       if (i === 4) {
         if (counts === 4) {
           reach.classList.remove('hiddenR');
+          for (let i2 = 0; i2 < 5; i2++) {
+            if (tbody.rows[i2].cells[i2].classList.contains('called') !== true) {
+              tbody.rows[i2].cells[i2].classList.add('reachTarget');
+            }
+          }
         }
         if (counts === 5) {
           bingoCall.classList.remove('hidden');
-        } else {
-          counts = 0;
         }
+          counts = 0;
       }
     }
     for (let i = 0; i < 5; i++) {
@@ -129,12 +141,16 @@
       if (i === 4) {
         if (counts === 4) {
           reach.classList.remove('hiddenR');
+          for (let i2 = 0; i2 < 5; i2++) {
+            if (tbody.rows[i2].cells[4 - i2].classList.contains('called') !== true) {
+              tbody.rows[i2].cells[4 - i2].classList.add('reachTarget');
+            }
+          }
         }
         if (counts === 5) {
           bingoCall.classList.remove('hidden');
-        } else {
-          counts = 0;
         }
+          counts = 0;
       }
     }
     const callCount = document.getElementById('callCount');
